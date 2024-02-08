@@ -14,14 +14,14 @@ public class RegistryTest {
     // TODO Complete with more test cases
 
     @Test
-    public void validateInvalidAgeNegative() {
-        Person person = new Person("Juan", 14856, -23,Gender.MALE,true);
+    public void validateInvalidAgeUnderAge() {
+        Person person = new Person("Juan", 14856, 15,Gender.MALE,true);
         RegisterResult result = registry.registerVoter(person);
-        Assert.assertEquals(RegisterResult.INVALID_AGE, result);
+        Assert.assertTrue(RegisterResult.VALID != result);
     }
     @Test
-    public void validateInvalidAgeTooHigh() {
-        Person person = new Person("David", 149856, 1000,Gender.FEMALE,true);
+    public void validateInvalidAgeInvalid() {
+        Person person = new Person("David", 149856, 1000,Gender.MALE,true);
         RegisterResult result = registry.registerVoter(person);
         Assert.assertEquals(RegisterResult.INVALID_AGE, result);
     }

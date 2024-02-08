@@ -1,14 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: edu.eci.cvds.tdd.registry.RegistryTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.004 s <<< FAILURE! -- in edu.eci.cvds.tdd.registry.RegistryTest
-edu.eci.cvds.tdd.registry.RegistryTest.validateInvalidAgeNegative -- Time elapsed: 0.004 s <<< FAILURE!
-java.lang.AssertionError: expected:<INVALID_AGE> but was:<VALID>
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.023 s <<< FAILURE! -- in edu.eci.cvds.tdd.registry.RegistryTest
+edu.eci.cvds.tdd.registry.RegistryTest.validateRegistryResult -- Time elapsed: 0.004 s <<< FAILURE!
+java.lang.AssertionError: expected:<VALID> but was:<INVALID_AGE>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:120)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at edu.eci.cvds.tdd.registry.RegistryTest.validateInvalidAgeNegative(RegistryTest.java:20)
+	at edu.eci.cvds.tdd.registry.RegistryTest.validateRegistryResult(RegistryTest.java:12)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -38,13 +38,13 @@ java.lang.AssertionError: expected:<INVALID_AGE> but was:<VALID>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-edu.eci.cvds.tdd.registry.RegistryTest.validateInvalidAgeTooHigh -- Time elapsed: 0 s <<< FAILURE!
-java.lang.AssertionError: expected:<INVALID_AGE> but was:<VALID>
+edu.eci.cvds.tdd.registry.RegistryTest.validateInvalidAgeUnderAge -- Time elapsed: 0 s <<< FAILURE!
+java.lang.AssertionError: expected:<INVALID_AGE> but was:<UNDERAGE>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:120)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at edu.eci.cvds.tdd.registry.RegistryTest.validateInvalidAgeTooHigh(RegistryTest.java:26)
+	at edu.eci.cvds.tdd.registry.RegistryTest.validateInvalidAgeUnderAge(RegistryTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
